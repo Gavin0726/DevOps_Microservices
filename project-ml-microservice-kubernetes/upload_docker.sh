@@ -5,11 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath="lnguoxun/flasksklearn"
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-
+docker image tag udacity:latest $dockerpath:udacity_v1
+docker login --username lnguoxun
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath:udacity_v1

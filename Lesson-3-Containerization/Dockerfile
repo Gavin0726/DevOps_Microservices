@@ -13,7 +13,7 @@ RUN pip install --upgrade pip &&\
     pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 5001
 
 # Run app.py at container launch
 CMD ["python", "web.py"]
